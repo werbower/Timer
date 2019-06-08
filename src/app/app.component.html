@@ -1,7 +1,6 @@
 <div class="paper">
   <div class="display">
-    {{ timerService.timerEntry.hour }} : {{ timerService.timerEntry.minute }} :
-    {{ timerService.timerEntry.second }}
+    {{stringDisplay()}}
   </div>
   <div class="actions">
     <button mat-raised-button (click)="startStop()">

@@ -38,4 +38,14 @@ export class AppComponent {
     return this.timerService.timerState === TimerState.start;
   }
 
+  fTwo(val: number): string {
+    return ('00' + val).substr(-2);
+  }
+
+  stringDisplay() {
+    return this.fTwo(this.timerService.timerEntry.hour)
+      + ': ' + this.fTwo(this.timerService.timerEntry.minute)
+      + ': ' + this.fTwo(this.timerService.timerEntry.second);
+  }
+
 }
